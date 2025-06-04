@@ -1,0 +1,166 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes</title>
+ </head>
+ <body>
+    <h1>IMAGENES</h1>
+    <pre>
+
+      El peso de una imagen para sitios web entre menos peso mejora la velociedad de carga de un sitio web
+      podria estar entre unos 20 o 30 KB.
+
+      Ademas al realizar una pagina web es preferible tener las imagenes, git, etc en un archivo dentro del
+      proyecto asi no dependes de otra pagina web que puede quitar la imagen o cerrar el sitio web de donde 
+      sacas la imagen.
+
+      Existen 2 tipos de imagenes:
+        
+      1. Vectoriales: Son matematicos (se crean con formulas)
+      y no tienen resolucion, es decir, no se pixelean
+      2. De mapa de bits: Son muchos cuadrados de colores (pixeles)
+      que juntos forman una imagen. A más pixeles más calidad de la
+      imagen
+
+      Formatos de Imagenes.
+      <!--
+      svg es vectorial para web (ejemplo si te dan 
+      dibujo .ai se debe esporta a svg)
+      -->
+      -svg: vectorial.
+
+      <!--
+      el jpg es un mapa de bit (el mas famoso en uso en
+      web) jgp y jpeg son lo mismo se utiliza para
+      fotografias
+      -->
+      -jpg, jpeg: es un mapa de bits utilizado para 
+      fotografias.
+
+      <!--
+      png son para transparencias o colores planos pesan
+      mucho mas que los png
+      -->
+      -png: se utilizan para transparencia de imagenes.
+
+      <!--
+      gif son utilizados para animaciones y transparencias
+      (duracion de menos de 10 seg)
+      -->
+      -gif: se utilizan para animaciones de una duracion
+      de menos de 10 seg.
+
+      <!--
+      webp combinan lo mejor de jpg y png con menos
+      peso
+      -->
+      -webp: una combinacion entre jpg y png.
+
+      <!--
+      avif tiene mejor compresion que webp
+      -->
+      -avif: mejor compresion que webp.
+
+      <!--
+      heilf es el formato de apple para fotografias
+      -->
+      -heif: es el formato de apple pero no se recomienda para
+      sitios web.
+
+      <!--
+      En html las imagnes se insertan con la etiqueta 
+      <img src=""> 
+      -->
+      <h2>Para subir la direccion de una imagen</h2>
+      <!--
+      Copiar la direccion de una imagen
+      -->
+
+      <!--
+      <img src="aqui se coloca el link o direccion del
+      archivo" alt="aqui se pone una descripcion"
+      -->
+   </pre>
+
+      <img src="data:image/png;base64,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" alt="">
+   
+   <pre>
+      <h2>Para subir la imagen de la pc</h2>
+   </pre>
+
+      <img src="/Contenido_embebido/img/donald.jpeg" alt="Imagen de la cara del pato donald">
+   
+   <pre>
+      <h2>Para subir un git</h2>
+   </pre>
+
+   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTJubmM3NzJhdjRsOWVrZDVuY2xmOXpkOXpsNXk2aHg4dGlzNDk1MCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qzeCF4ymrgFXy/giphy.webp" alt="rico mac pato contando su dinero">
+
+   <h1>PICTURE</h1>
+   <pre>
+      Es una etiqueta para agregar varias imagenes a la vez
+      esto es para asegurarse de que las imagenes carguen en 
+      todos los navegadores.
+
+      Entonces puedes tener una imagen con varios formatos 
+      de imagen jgp, png, etc. Esto es para que la misma
+      imagen funcione en todos los navegadores.
+
+      Ejemplo
+   </pre>
+
+   <picture>
+      <source srcset="/Contenido_embebido/img/donald.jpeg">
+      <source srcset="/Contenido_embebido/img/donald.png"> <!--caso ejemplo no existe donald.png-->
+      <!--
+         entonces "<img src="" alt="">" funciona como la ultima isntancia si ninguna 
+         de las anteriores source no funcionaron.
+      -->
+      <img src="/Contenido_embebido/img/donald.jpeg" alt="">
+   </picture>
+
+   <h1>FIGURE</h1>
+   <pre>
+      No es una figura "figure" es para mostrar cualquier elemento que rompa de alguna manera
+      el flujo del contenido (No es exclusivo para imagenes) pueden entrar videos, imagenes, etc.
+
+      Ejemplo.
+
+      Contando una historia muestra en medio una imagen lo cual separa un bloque de parrafo
+   </pre>
+
+   <figure>
+      <img src="/Contenido_embebido/img/donald.jpeg" 
+      alt="Cara del pato donald" width="200" height="140"> <!--Con "width" (ancho) se pude ajustar el tamaño de la imagen de 200 pixeles o con "height" (altura)-->
+      <figcaption>Imagen del Pato Donald para EDteam</figcaption>
+      <!--"figcaption" es la descripcionva de ultimo-->
+   </figure>
+
+   <h1>AUDIO & VIDEO</h1>
+   <pre>
+      El manejo de audio y video en html seria el siguiente.
+      
+      -Video (preferible subir el video a youtube y traerlo de youtube)
+   </pre>
+
+      <video src="/Contenido_embebido/media/videro_prueba.mp4" width="400" height="400"
+      controls poster="/Contenido_embebido/img/madres.jpeg"></video><!--"controls sirve para colocar los botones del video por defecto" y poster es la miniatura "opcional"-->
+
+   <pre>
+      -Audio (no muy usado y preferible usar videos)
+   </pre>
+
+   <audio src="/Contenido_embebido/media/audio.mp3" controls></audio>
+
+   <h1>CONTENIDO EMBEBIDO</h1>
+   <pre>
+      Es traer contenido de afuera de otras paginas es copiar y pegar "embed" en español "codigo de insercion"
+   </pre>
+
+   <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DKYRPOJsz49/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DKYRPOJsz49/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DKYRPOJsz49/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida de Jala University (@jala_university)</a></p></div></blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+
+</body>
+</html>
