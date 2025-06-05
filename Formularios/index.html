@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 7 - Formularios</title>
+    <style>
+        div{
+            margin-bottom: 10px;
+        }
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FORMULARIOS</h1>
+    <h2>¿Qué son los formularios?</h2>
+    <pre>
+        Son elementos de HTML que nos permiten resivir información de los usuarios
+    </pre>
+
+    <h2>Ejemplo 1. Estructura basica de un Formulario</h2>
+    <!--Se utiliza la etiqueta <form></form>-->
+
+    <form action="/Formularios/recibido.html">
+        <!--Aqui se crea el formulario-->
+        <div>
+            <input placeholder="Usuario"> <!--placeholder sirve para poner un comentario-->
+        </div>
+        <div>
+            <input placeholder="Contraseña">
+        </div>
+        <button>Ingresar</button>
+    </form>
+
+    <h2>Ejemplo 2. Estructura más avanzada de un Formulario</h2>
+    <form action="/Formularios/recibido.html">
+        <!--Aqui se crea el formulario-->
+        <!--Existen 2 formas de usar el label con "for" y sin "for" como se ve a continuacion-->
+        <!--fielset es para agrupar y generar un bloque-->
+        <fieldset>
+            <legend>Tus datos</legend>
+            <div>
+            <label for="username">Usuario</label> <!--usando "for" llamdo al id de usuario-->
+            <input placeholder="Usuario" id="username" 
+            value="Saul"> <!--"value" da un valor predeterminado-->
+        </div>
+        <div>
+            <label> <!--sin usar "for" colocamos directamente el input dentro de label-->
+                Contraseña
+                <input placeholder="Contraseña">
+            </label>
+        </div>
+        </fieldset>
+
+        <button>Ingresar</button>
+        <!-- 
+            2 modos de enviar un formulario
+
+            1. Button
+            2. <input type="submite">
+        -->
+        <input type="submit" value="Enviar">
+
+        <fieldset>
+            <legend>Tus gustos</legend>
+            <div>
+            <label for="music">Musica favorita</label> <!--usando "for" llamdo al id de usuario-->
+            <input placeholder="Musica favorita" id="music">
+        </div>
+        <div>
+            <label> <!--sin usar "for" colocamos directamente el input dentro de label-->
+                Plato favorito
+                <input placeholder="Plato favorito">
+            </label>
+        </div>
+        </fieldset>
+        <button>Ingresar</button>
+    </form>
+
+    <!--Otro form-->
+
+    <h2>TIPOS DE INPUT</h2>
+    <form action="/Formularios/recibido.html">
+        <label>
+            Text
+            <input type="text">
+        </label>
+        <label>
+            Number
+            <input type="number">
+        </label>
+        <label>
+            Date
+            <input type="date"> <!--es nativo-->
+        </label>
+        <label>
+            Email
+            <input type="email">
+        </label>
+
+        <!--Solo funciona en telefono muestra un teclado numerico-->
+        <label>
+            Tel
+            <input type="telf">
+        </label>
+
+        <!--El color solo con html no sirve para mucho pero si con CSS y JavaS  cript-->
+        <label>
+            color
+            <input type="color">
+        </label>
+
+        <!--Para las contraseñas-->
+        <label>
+            Password
+            <input type="password">
+        </label>
+
+        <label>
+            Range
+            <input type="range"> <!--min="10" max="20" step="2" para volumen min, max y los saltos del rango-->
+        </label>
+
+        <input type="submit" value="Enviar datos">
+    </form>
+
+    <h2>OTROS TIPOS DE INPUT</h2>
+
+    <form action="/Formularios/recibido.html">
+        <fieldset>
+        <legend>checkbox</legend>
+            <h3>¿Que quieres estudiar?</h3>
+            <label>
+                HTML
+                <input type="checkbox" name="cursos"> <!--es necesario "name"-->
+            </label>
+            <label>
+                CSS
+                <input type="checkbox" name="cursos">
+            </label>
+            <label>
+                JavaScript
+                <input type="checkbox" name="cursos">
+            </label>
+            <!--Para colcoar los checks atras es de la siguiente manera-->
+            <label>
+                <input type="checkbox" name="cursos">
+                Java
+            </label>
+            <label>
+                <input type="checkbox" name="cursos">
+                Python
+            </label>
+            <label>
+                <input type="checkbox" name="cursos">
+                C++
+            </label>
+        </fieldset>
+    </form>
+
+    <form action="/Formularios/recibido.html">
+        <fieldset>
+        <legend>Radiobuttons</legend>
+            <h3>¿Cual es tu genero?</h3>
+            <label>
+                Hombre
+                <input type="radio" name="genero"> <!--es necesario "name"-->
+            </label>
+            <label>
+                Mujer
+                <input type="radio" name="genero">
+            </label>
+        </fieldset>
+
+        <div>
+        <select name="pais" id="">
+            <!--Para separar los paices de sud America con los paices de norte America se usa optgroup-->
+            <optgroup label="Sud América">
+                <option value="pe">Perú</option>
+                <option value="ar">Argentina</option>
+                <option value="co">Colombia</option>
+                <option value="bo">Bolivia</option>
+                <option value="ch">Chile</option>
+            </optgroup>
+            
+            <optgroup label="Norte América">
+                <option value="eu">Estados Unidos</option>
+                <option value="Ca">Canada</option>
+            </optgroup>
+        </select>
+        </div>
+
+        <h2>Textarea</h2>
+        <label for="comment">Deja tu comentario</label>
+        <textarea name="" id="comment" cols="20" rows="5">
+        </textarea>
+    </form>
+
+    <h2>ATRIBUTOS DE FORMULARIOS</h2>
+
+    <pre>
+        -"checked" para seleccioar un checkbox o radio por 
+        defaul.
+
+        -"selected" igual que el checked pero en un select.
+
+        -"required" que es cuando un campo sea obligatorio 
+        y si no se llena no se puede enviar el formulario
+
+        -"readonly" que es si un campo tenga un valor y no 
+        se pueda cambiar
+
+        -"autocomplete" significa que el navegador tiene los 
+        datos automaticamente se llenan solitos.
+    </pre>
+</body>
+</html>

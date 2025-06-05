@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 6 - Tablas</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid red;
+            padding: .25em .5em;
+        }
+
+        thead{
+            color: red;
+            text-align: left;
+        }
+
+        tfoot{
+            background: yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Tablas</h1>
+    <h2>¿Que son las tablas?</h2>
+    <pre>
+    Son formas de organizar la información o datos en cuadriculas
+    </pre>
+
+    <!--ESTRUCTURAS DE LAS TABLAS
+        Se usa la etiqueta <table></table> para encerrar a todas las tablas
+
+        Las filas se marcan con <tr></tr> (table row)
+
+        Las columnas no existen en html
+
+        Las celdas son las divisiones de cada fila y se marcan con <td></td>
+        (table data)
+    -->
+
+    <!--Forma facil de realizar una tabla-->
+    <h2>Forma simple de realizar una tabla</h2>
+    <table>
+        <tr>
+            <td></td>
+            <td>Lunes</td>
+            <td>Martes</td>
+            <td>Miercoles</td>
+        </tr>
+        <tr>
+            <td>Ingresos</td>
+            <td>100</td>
+            <td>200</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Egresos</td>
+            <td>75</td>
+            <td>220</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Saldo</td>
+            <td>25</td>
+            <td>-20</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Final</td>
+            <td></td>
+            <td></td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <!--
+        Estructura completa de una tabla
+
+        <table>
+            <caption></caption>
+            <th>
+                <td></td>
+                <td></td>
+            </th>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td></td>
+                <td></td>
+            </tfoot>
+        </table>
+    -->
+
+    <h2>Forma correcta de hacer una tabla</h2>
+    <!--Ejempo de como se utiliza correctamente para hacer una tabla-->
+    <h2>Mi horario de estudios</h2>
+
+    <table>
+        <!--<thead></thead> Cabecera indica un nombre o categoria-->
+        <thead>
+            <tr>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+            </tr>
+        </thead>
+
+        <!--<tbody></tbody> podemos encerrar todo lo que es el cuerpo-->
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td>CSS</td>
+                <td>Photoshop</td>
+                <td>JavaScript</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>PHP</td>
+                <td>CSS</td>
+                <td>HTML</td>
+            </tr>
+        </tbody>
+        <!--<tfoot></tfoot> encerramos el pie de la tabla-->
+        <tfoot>
+            <tr>
+                <td>Total de cursos</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Agrupar celdas
+    
+        Se usan los atributos 
+
+        colspan=n (filas)
+        rowspan=n (columnas)
+
+        Donde n es la cantidad de columnas o filas que se can a 
+        combinar o agrupar
+    -->
+    <h2>Agrupar celdas</h2>
+
+    <pre>
+        Ejemplo 1
+    </pre>
+
+    <table>
+        <tr>
+            <td></td>
+            <td>Lunes</td>
+            <td>Martes</td>
+            <td>Miercoles</td>
+        </tr>
+        <tr>
+            <td>Ingresos</td>
+            <td>100</td>
+            <td>200</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Egresos</td>
+            <td>75</td>
+            <td>220</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Saldo</td>
+            <td>25</td>
+            <td>-20</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td colspan="3">Final</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <pre>
+        Ejemplo 2
+    </pre>
+
+    <h2>Mi horario de estudios</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">HTML</td>
+                <td colspan="2">CSS</td>>
+                <td rowspan="2">JavaScript</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>Photoshop</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total de cursos</td>
+                <td>5</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>Colgroup</h2>
+    <pre>
+        Se utiliza para agrupar columnas y poder manipularla de la forma 
+        en que queremos
+    
+        Ejemplo:
+    </pre>
+
+    <table>
+        <colgroup>
+            <col span="3">
+            <col style="background-color: yellow;">
+        </colgroup>
+        <tr>
+            <td></td>
+            <td>Lunes</td>
+            <td>Martes</td>
+            <td>Miercoles</td>
+        </tr>
+        <tr>
+            <td>Ingresos</td>
+            <td>100</td>
+            <td>200</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Egresos</td>
+            <td>75</td>
+            <td>220</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Saldo</td>
+            <td>25</td>
+            <td>-20</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td colspan="3">Final</td>
+            <td>5</td>
+        </tr>
+    </table>
+</body>
+</html>
